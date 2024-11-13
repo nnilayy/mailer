@@ -1,7 +1,7 @@
 # scheduler.py
 import schedule
 import time
-from data_handler import get_pending_emails, update_email_status
+from api.data_handler import get_pending_emails, update_email_status
 from email_sender import send_email_with_attachments
 from datetime import datetime
 

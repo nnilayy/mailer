@@ -16,6 +16,7 @@ def send_email_with_attachments(to_email, subject, body, resume_url=None, cover_
 
     # Embed tracking pixel
     tracking_pixel_url = f'{VERCEL_APP_URL}/api/track?email={to_email}'
+    print("Tracking pixel URL:", tracking_pixel_url)
     tracking_pixel = f'<img src="{tracking_pixel_url}" width="1" height="1" style="display:none;">'
     msg.add_alternative(f'{body}{tracking_pixel}', subtype='html')
 

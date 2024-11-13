@@ -1,5 +1,5 @@
 # process_form.py
-from data_handler import insert_email_record
+from api.data_handler import insert_email_record
 
 form_data = {
     'company': 'Example Corp',
@@ -14,5 +14,5 @@ form_data = {
     'cover_letter_link': 'https://drive.google.com/file/d/your_cover_letter_id/view?usp=sharing'
 }
 
-insert_email_record(form_data)
+# insert_email_record(form_data)
 print("Form data processed and email scheduled.")
