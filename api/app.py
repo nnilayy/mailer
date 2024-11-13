@@ -2,11 +2,7 @@
 from fastapi import FastAPI, Response, Query
 from starlette.responses import StreamingResponse
 import datetime
-import sys
-import os
 
-# Add the root directory of the project to sys.path
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from data_handler import update_email_open
 
 app = FastAPI()
