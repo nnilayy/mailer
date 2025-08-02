@@ -25,15 +25,15 @@ async def track_email_open(request: Request):
         print(f"Email opened by {email} at {datetime.now()}")
 
     # 1x1 transparent GIF
-    transparent_gif = (
-        b'GIF89a'
-        b'\x01\x00\x01\x00'
-        b'\x80\x00\x00'
-        b'\x00\x00\x00'
-        b'\x00\x00\x00'
-        b'\x2c\x00\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02'
-        b'\x44\x01\x00\x3b'
-    )
+    # transparent_gif = (
+    #     b'GIF89a'
+    #     b'\x01\x00\x01\x00'
+    #     b'\x80\x00\x00'
+    #     b'\x00\x00\x00'
+    #     b'\x00\x00\x00'
+    #     b'\x2c\x00\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02'
+    #     b'\x44\x01\x00\x3b'
+    # )
 
     # Add cache-busting headers
     headers = {
@@ -43,4 +43,4 @@ async def track_email_open(request: Request):
         "Content-Type": "image/gif"
     }
 
-    return Response(content=transparent_gif, headers=headers)
+    return Response(content="", headers=headers)
