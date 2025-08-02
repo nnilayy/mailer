@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import PlainTextResponse
 from datetime import datetime
 
 app = FastAPI()
@@ -12,6 +13,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+def home():
+    return PlainTextResponse("Hello World")
 
 @app.get("/api/greetuser")
 async def track_email_open(request: Request):
