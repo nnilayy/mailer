@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/api/track")
+@app.get("/api/greetuser")
 async def track_email_open(request: Request):
     email = request.query_params.get("email")
     if email:
