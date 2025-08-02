@@ -7,7 +7,7 @@ app = FastAPI()
 # Enable CORS for all origins, methods, and headers for maximum compatibility
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins; adjust this if needed
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
